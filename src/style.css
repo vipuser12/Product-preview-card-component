@@ -1,4 +1,4 @@
-:root{
+:root {
   --Green-500: hsl(158, 36%, 37%);
   --Green-700: hsl(158, 42%, 18%);
   --Black: hsl(212, 21%, 14%);
@@ -6,22 +6,22 @@
   --Cream: hsl(30, 38%, 92%);
   --White: hsl(0, 0%, 100%);
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   padding: 0;
   margin: 0;
   font-family: 'montserrat';
-  box-sizing: border-box;
-  width: 1440px;
   background: var(--Cream);
 }
-.container{
+
+.container {
   width: 45%;
-  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,22 +29,24 @@ body{
   border-radius: 10px;
   margin: 90px auto;
 }
-p{
+
+p {
   font-size: var(--Font-size-paragraph);
   color: var(--Grey);
 }
-h1{
+
+h1 {
   font-size: 36px;
   color: var(--Black);
 }
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   border-radius: 10px;
-  height: 500px;
   width: 100%;
+  height: auto;
 }
 
 main .left {
@@ -60,7 +62,7 @@ main .left img {
   border-radius: 10px 0 0 10px;
 }
 
-main .right{
+main .right {
   background-color: var(--White);
   padding: 30px;
   display: flex;
@@ -70,13 +72,12 @@ main .right{
   height: 100%;
   justify-content: space-around;
 }
-main .right h1{
-  
-}
-main .right p{
-  
-}
-.right button{
+
+main .right h1 {}
+
+main .right p {}
+
+.right button {
   background-color: var(--Green-500);
   color: var(--White);
   width: 100%;
@@ -92,21 +93,157 @@ main .right p{
   flex-direction: row;
   gap: 10px;
 }
-.right article{
+
+.right article {
   display: flex;
   flex-direction: row;
   gap: 20px;
   justify-content: flex-start;
   align-items: center;
 }
-article p:first-child{
+
+article p:first-child {
   color: var(--Green-700);
   font-size: 30px;
   font-weight: bold;
 }
-article p:nth-child(2){
+
+article p:nth-child(2) {
   color: var(--Grey);
   font-size: 20px;
   text-decoration: line-through;
 }
 
+/* ---------- Large Desktop ---------- */
+@media (min-width: 1200px) {
+  .container {
+    width: 45%;
+    margin: 90px auto;
+  }
+
+  main {
+    flex-direction: row;
+    height: 500px;
+  }
+
+  main .left,
+  main .right {
+    width: 50%;
+    height: 100%;
+  }
+
+  main .left img {
+    border-radius: 10px 0 0 10px;
+  }
+
+  main .right {
+    border-radius: 0 10px 10px 0;
+    padding: 30px;
+  }
+}
+
+/* ---------- Tablet Responsive Design: 768px - 1199px ---------- */
+@media (max-width: 1199px) and (min-width: 768px) {
+
+  .container {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  main .left,
+  main .right {
+    width: 100%;
+    height: auto;
+  }
+
+  main .left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  main .right {
+    border-radius: 0 0 10px 10px;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .right button {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  article p:first-child {
+    font-size: 24px;
+  }
+
+  article p:nth-child(2) {
+    font-size: 16px;
+  }
+}
+
+/* ---------- Mobile Devices (0 - 767px) ---------- */
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  main .left,
+  main .right {
+    width: 100%;
+    height: auto;
+  }
+
+  main .left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+
+  main .right {
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .right button {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  article p:first-child {
+    font-size: 20px;
+  }
+
+  article p:nth-child(2) {
+    font-size: 14px;
+  }
+}
